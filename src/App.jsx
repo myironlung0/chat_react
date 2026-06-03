@@ -82,7 +82,6 @@ function App() {
         >
         </textarea>
         <button id="send_btn" onClick={() => {
-          setMessages([...messages, name + ": " + message]);
           wsRef.current.send(JSON.stringify({
             type: "message",
             nameFrom: name,
