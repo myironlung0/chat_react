@@ -73,7 +73,7 @@ function App() {
   }else{
     return(
     <><div>
-      <h2>Chat</h2>
+      <h2>Hello {name}!</h2>
       <textarea id="message"
           type="text"
           placeholder="Your message..."
