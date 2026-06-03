@@ -1,3 +1,7 @@
+*{
+  margin-top:20px;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -181,4 +185,9 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+#message{
+height: 100px;
+width: 200px;
 }
