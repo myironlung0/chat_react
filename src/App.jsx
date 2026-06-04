@@ -1,7 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
@@ -73,7 +70,7 @@ function App() {
   }else{
     return(
     <><div>
-      <h2>Hello {name}!</h2>
+      <h2>Hello {name}</h2>
       <textarea id="message"
           type="text"
           placeholder="Your message..."
@@ -81,6 +78,18 @@ function App() {
           onChange={(e) => setMessage(e.target.value)}
         >
         </textarea>
+
+        <select id="to_select"
+          value={selectedUser}
+          onChange={(e) => setSelectedUser(e.target.value)}
+        >
+          <option value="">Everyone</option> 
+          {users.map((u) => (
+            <option value={u}>{u}</option>
+          ))}
+
+        </select>
+
         <button id="send_btn" onClick={() => {
           wsRef.current.send(JSON.stringify({
             type: "message",
